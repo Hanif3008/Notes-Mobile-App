@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#1c2f32", "surface-dim": "#cfdaf2", "on-secondary-container": "#006977", "surface-container-high": "#dee8ff", "surface-bright": "#f9f9ff", "surface-container": "#e7eeff", "on-secondary-fixed": "#001f25", "on-surface-variant": "#3e494c", "tertiary-fixed": "#d1e6e9", "inverse-on-surface": "#ecf1ff", "primary": "#006879", "primary-container": "#29a0b8", "inverse-primary": "#6bd5ee", "on-primary-fixed": "#001f26", "on-secondary": "#ffffff", "error": "#ba1a1a", "surface-container-low": "#f0f3ff", "secondary-container": "#7fe9fe", "surface-tint": "#006879", "on-secondary-fixed-variant": "#004e59", "tertiary-fixed-dim": "#b6cacd", "background": "#f9f9ff", "on-background": "#111c2d", "secondary": "#006876", "surface-container-highest": "#d8e3fb", "surface": "#f9f9ff", "secondary-fixed": "#a1efff", "inverse-surface": "#263143", "primary-fixed-dim": "#6bd5ee", "on-tertiary-fixed": "#0b1e21", "on-tertiary-fixed-variant": "#374a4d", "tertiary-container": "#83979a", "on-primary-fixed-variant": "#004e5c", "on-surface": "#111c2d", "on-tertiary": "#ffffff", "error-container": "#ffdad6", "on-error-container": "#93000a", "primary-fixed": "#aaedff", "tertiary": "#4f6264", "on-error": "#ffffff", "on-primary": "#ffffff", "outline": "#6e797c", "surface-variant": "#d8e3fb", "on-primary-container": "#00313a", "secondary-fixed-dim": "#6ad5ea", "outline-variant": "#bdc8cc", "surface-container-lowest": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xl": "2rem", "margin": "1.25rem" }, "fontFamily": { "display-lg": ["Inter"], "headline-md": ["Inter"], "label-lg": ["Inter"], "display-lg-mobile": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Inter"], "title-md": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_4px_20px_rgba(41,160,184,0.06)]"><div class="flex items-center justify-between px-margin h-16"><div class="flex items-center gap-space-sm"><img alt="Fuel &amp; Notes App Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAfOZMJp609OzJ_4XZ9UBGGy_bR0mZMRqxaDetFX2AAds_Hi8TDL4V9DCKdA5-IXG-w0DEbj3S5EGjMyQtRI0FUoRmQoGpr45BkeEW-6R_xbmq9lCVt-B_PZXaYkMr42UzoriHNfLlzcXcX4Jbf5al3XCwbwNa3p-BkddvTLw8ppaoubblS35lt7TalnHsKWQ1PtISsv_MsULFBcK3UxHsVwKiUO15X-y8Bqf4QpMbFMw"/><div class="flex flex-col"><span class="font-label-sm text-label-sm text-primary tracking-wide uppercase">Fuel &amp; Notes</span><span class="font-headline-md text-headline-md text-on-surface">Notes</span></div></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><button aria-label="Profile Options" class="w-11 h-11 flex items-center justify-center rounded-full focus:outline-none"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_8px_rgba(41,160,184,0.15)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkWjYaOzzLSCoY8DqbIWV2VVObPax5NLAk0us5OGB0wASLdfyzkLw4ah_M174jo8ALGair_4pkYFOUql_lJLmvJMmd5tjqsML2jy5CCs7b07bIw0DYHJfQEOqyBq0GT_qE9rOE82Nz3j_LMmI_dsC6lpsvou3SuZL5orN2QVvv5ul17ta3zlglDUa-TgT3syJAbnpUNyzcFbrfPmhxB0yy39Tg9H5SuaFDwoNMEVQ3"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full pb-10">
+<!-- Top Ambient Banner with Greeting & Quick Stats -->
+<div class="relative overflow-hidden bg-gradient-to-b from-secondary-container/40 via-surface-container-low/80 to-transparent px-margin pt-3 pb-5">
+<!-- Subtle energetic decorative glow blobs -->
+<div class="absolute -top-12 -right-8 w-44 h-44 rounded-full bg-primary-container/15 blur-2xl pointer-events-none"></div>
+<div class="absolute top-10 -left-10 w-36 h-36 rounded-full bg-secondary-fixed/20 blur-xl pointer-events-none"></div>
+<!-- User Header Row -->
+<div class="relative z-10 flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-on-surface">Halo, Hanif</span>
+<span class="inline-block text-xl animate-bounce">👋</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            #001
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">5 catatan terekam • Sinkronisasi aktif</p>
+</div>
+<!-- Quick Action: Favorite Filter Toggle -->
+<button aria-label="Catatan Tersimpan" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-lowest text-primary shadow-[0_4px_16px_rgba(41,160,184,0.12)] active:scale-95 transition-transform" id="bookmarkFilterBtn">
+<span class="material-symbols-outlined text-[22px]">bookmarks</span>
+</button>
+</div>
+<!-- Interactive Fuel & Activity Summary Card -->
+<div class="mt-4 relative z-10 p-space-md rounded-2xl bg-surface-container-lowest shadow-[0_6px_24px_rgba(41,160,184,0.08)]">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Ringkasan BBM &amp; Aktivitas</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bulan ini • Periode Berjalan</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">
+          Auto-Sync
+        </span>
+</div>
+<!-- 3 Metrics Grid -->
+<div class="grid grid-cols-3 gap-2 pt-1 text-center">
+<div class="p-2 rounded-xl bg-surface-container-low/60 flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total Catatan</span>
+<span class="font-headline-md text-headline-md text-primary mt-0.5">5</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80">Entri Aktif</span>
+</div>
+<div class="p-2 rounded-xl bg-surface-container-low/60 flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rata-rata</span>
+<span class="font-headline-md text-headline-md text-primary mt-0.5">47%</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80">Kelengkapan</span>
+</div>
+<div class="p-2 rounded-xl bg-surface-container-low/60 flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">BBM Terisi</span>
+<span class="font-headline-md text-headline-md text-secondary mt-0.5">42.5<span class="text-xs">L</span></span>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80">Pertamax Turbo</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Search & Filter Controls -->
+<div class="px-margin mt-2 flex flex-col gap-3">
+<!-- Search Bar -->
+<div class="relative flex items-center">
+<span class="absolute left-4 text-on-surface-variant pointer-events-none material-symbols-outlined text-[22px]">search</span>
+<input class="w-full h-[52px] pl-12 pr-12 rounded-full bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline/70 shadow-[0_2px_12px_rgba(41,160,184,0.06)] focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="searchInput" placeholder="Cari judul, SPBU Kuningan, atau rute..." type="text"/>
+<button aria-label="Bersihkan pencarian" class="absolute right-3.5 w-7 h-7 hidden items-center justify-center rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" id="clearSearchBtn">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Filter Category Pills Horizontal Carousel -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<button class="filter-chip active flex-shrink-0 px-4 h-9 rounded-full font-label-md text-label-md transition-all duration-200 bg-primary-container text-on-primary shadow-sm" data-filter="all">
+        Semua (5)
+      </button>
+<button class="filter-chip flex-shrink-0 px-4 h-9 rounded-full font-label-md text-label-md transition-all duration-200 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-sm" data-filter="high">
+        Selesai (&gt;50%)
+      </button>
+<button class="filter-chip flex-shrink-0 px-4 h-9 rounded-full font-label-md text-label-md transition-all duration-200 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-sm" data-filter="mid">
+        Dalam Proses (20-50%)
+      </button>
+<button class="filter-chip flex-shrink-0 px-4 h-9 rounded-full font-label-md text-label-md transition-all duration-200 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-sm flex items-center gap-1.5" data-filter="pinned">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+        Tersemat
+      </button>
+</div>
+<!-- Secondary Meta / Sort Helper -->
+<div class="flex items-center justify-between pt-1 px-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="resultCount">Menampilkan 5 dari 5 catatan</span>
+<div class="flex items-center gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="sortSelector">Urutkan:</label>
+<select class="bg-transparent font-label-sm text-label-sm text-primary font-semibold focus:outline-none cursor-pointer" id="sortSelector">
+<option value="newest">Terbaru</option>
+<option value="highest">Status Tertinggi</option>
+<option value="lowest">Status Terendah</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Cards List Container -->
+<div class="px-margin mt-3 flex flex-col gap-3.5" id="notesContainer">
+<!-- NOTE ITEM #1 (High Progress / Completed, Pinned) -->
+<article class="note-card relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-md shadow-[0_4px_20px_rgba(41,160,184,0.06)] hover:shadow-md transition-all duration-200" data-id="1" data-keywords="title 1 pertamina kuningan pertamax turbo struk fuel pay jakarta spbu" data-pinned="true" data-progress="98">
+<!-- Atmospheric Top Accent Strip -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-container via-secondary-container to-primary"></div>
+<!-- Card Top Info Header -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-lg bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">
+            #1
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+            Selesai 98%
+          </span>
+<span class="p-1 text-primary-container" title="Catatan Tersemat">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</span>
+</div>
+<!-- Options Trigger -->
+<button aria-label="Menu Catatan 1" class="menu-btn w-8 h-8 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Title & Body Description -->
+<div class="mt-2.5">
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Title 1</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+          Pengisian Pertamax Turbo 42.5L di SPBU Pertamina Kuningan. Pembayaran nirkontak tervalidasi via Fuel Pay.
+        </p>
+</div>
+<!-- Fuel Highlight Tag -->
+<div class="mt-3 flex items-center gap-2 flex-wrap">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">local_gas_station</span>
+<span>SPBU Pertamina Kuningan</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">payments</span>
+<span>Fuel Pay Berhasil</span>
+</div>
+</div>
+<!-- Progress Meter -->
+<div class="mt-3.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Kelengkapan Data</span>
+<span class="text-primary font-bold">98%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-primary-container" style="width: 98%;"></div>
+</div>
+</div>
+<!-- Geotag & Timestamps Footnote -->
+<div class="mt-4 pt-3 border-t-0 flex flex-wrap items-center justify-between gap-2">
+<button class="geo-pill inline-flex items-center gap-1 text-primary hover:text-on-secondary-container transition-colors font-label-sm text-label-sm group" data-geo="-6.2088, 106.8456">
+<span class="material-symbols-outlined text-[16px] group-hover:scale-110 transition-transform">location_on</span>
+<span class="underline decoration-dotted">-6.2088, 106.8456</span>
+</button>
+<div class="flex items-center gap-2 font-label-sm text-[11px] text-outline">
+<span>Dibuat: 20 Mar 2025</span>
+<span>•</span>
+<span>Update: 10:45</span>
+</div>
+</div>
+</article>
+<!-- NOTE ITEM #2 (In Progress - 48%) -->
+<article class="note-card relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-md shadow-[0_4px_20px_rgba(41,160,184,0.06)] hover:shadow-md transition-all duration-200" data-id="2" data-keywords="title 2 evaluasi konsumsi harian cek jarak tempuh rute barat efisiensi" data-pinned="false" data-progress="48">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-lg bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">
+            #2
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span>
+            Proses 48%
+          </span>
+</div>
+<button aria-label="Menu Catatan 2" class="menu-btn w-8 h-8 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div class="mt-2.5">
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Title 2</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+          Evaluasi konsumsi harian &amp; cek jarak tempuh rute barat. Menunggu data penyesuaian jarak odometer trip A.
+        </p>
+</div>
+<!-- Quick Route Tag -->
+<div class="mt-3 flex items-center gap-2 flex-wrap">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">alt_route</span>
+<span>Rute Barat (Tol Kebon Jeruk)</span>
+</div>
+</div>
+<!-- Progress Meter -->
+<div class="mt-3.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Kelengkapan Data</span>
+<span class="text-primary font-bold">48%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-primary-container" style="width: 48%;"></div>
+</div>
+</div>
+<!-- Footer Geotag & Timestamps -->
+<div class="mt-4 pt-3 flex flex-wrap items-center justify-between gap-2">
+<button class="geo-pill inline-flex items-center gap-1 text-primary hover:text-on-secondary-container transition-colors font-label-sm text-label-sm group" data-geo="2.0000, 2.0000">
+<span class="material-symbols-outlined text-[16px] group-hover:scale-110 transition-transform">location_on</span>
+<span class="underline decoration-dotted">Lat: 2.000, Long: 2.000</span>
+</button>
+<div class="flex items-center gap-2 font-label-sm text-[11px] text-outline">
+<span>Dibuat: 19 Mar 2025</span>
+<span>•</span>
+<span>Update: 18:20</span>
+</div>
+</div>
+</article>
+<!-- NOTE ITEM #3 (Active - 29%) -->
+<article class="note-card relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-md shadow-[0_4px_20px_rgba(41,160,184,0.06)] hover:shadow-md transition-all duration-200" data-id="3" data-keywords="title 3 log pengisian shell v-power struk digital scan voucher" data-pinned="false" data-progress="29">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-lg bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">
+            #3
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+            Aktif 29%
+          </span>
+</div>
+<button aria-label="Menu Catatan 3" class="menu-btn w-8 h-8 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div class="mt-2.5">
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Title 3</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+          Log pengisian Shell V-Power &amp; struk digital. Foto struk terlampir, menunggu verifikasi reward poin loyalti.
+        </p>
+</div>
+<div class="mt-3 flex items-center gap-2 flex-wrap">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">receipt_long</span>
+<span>Struk Terlampir</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">star</span>
+<span>Reward Shell</span>
+</div>
+</div>
+<!-- Progress Meter -->
+<div class="mt-3.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Kelengkapan Data</span>
+<span class="text-primary font-bold">29%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-primary-container" style="width: 29%;"></div>
+</div>
+</div>
+<!-- Footer Geotag & Timestamps -->
+<div class="mt-4 pt-3 flex flex-wrap items-center justify-between gap-2">
+<button class="geo-pill inline-flex items-center gap-1 text-primary hover:text-on-secondary-container transition-colors font-label-sm text-label-sm group" data-geo="3.0000, 3.0000">
+<span class="material-symbols-outlined text-[16px] group-hover:scale-110 transition-transform">location_on</span>
+<span class="underline decoration-dotted">Lat: 3.000, Long: 3.000</span>
+</button>
+<div class="flex items-center gap-2 font-label-sm text-[11px] text-outline">
+<span>Dibuat: 18 Mar 2025</span>
+<span>•</span>
+<span>Update: 09:12</span>
+</div>
+</div>
+</article>
+<!-- NOTE ITEM #4 (Active - 27%) -->
+<article class="note-card relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-md shadow-[0_4px_20px_rgba(41,160,184,0.06)] hover:shadow-md transition-all duration-200" data-id="4" data-keywords="title 4 oli mesin filter bensin bengkel servis berkala maintenance" data-pinned="false" data-progress="27">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-lg bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">
+            #4
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+            Aktif 27%
+          </span>
+</div>
+<button aria-label="Menu Catatan 4" class="menu-btn w-8 h-8 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div class="mt-2.5">
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Title 4</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+          Catatan penggantian oli mesin &amp; filter bensin berkala. Jadwal bengkel berikutnya terestimasi pada 10.000 km.
+        </p>
+</div>
+<div class="mt-3 flex items-center gap-2 flex-wrap">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">build</span>
+<span>Servis Berkala</span>
+</div>
+</div>
+<!-- Progress Meter -->
+<div class="mt-3.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Kelengkapan Data</span>
+<span class="text-primary font-bold">27%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-primary-container" style="width: 27%;"></div>
+</div>
+</div>
+<!-- Footer Geotag & Timestamps -->
+<div class="mt-4 pt-3 flex flex-wrap items-center justify-between gap-2">
+<button class="geo-pill inline-flex items-center gap-1 text-primary hover:text-on-secondary-container transition-colors font-label-sm text-label-sm group" data-geo="4.0000, 4.0000">
+<span class="material-symbols-outlined text-[16px] group-hover:scale-110 transition-transform">location_on</span>
+<span class="underline decoration-dotted">Lat: 4.000, Long: 4.000</span>
+</button>
+<div class="flex items-center gap-2 font-label-sm text-[11px] text-outline">
+<span>Dibuat: 16 Mar 2025</span>
+<span>•</span>
+<span>Update: 14:15</span>
+</div>
+</div>
+</article>
+<!-- NOTE ITEM #5 (Active - 32%) -->
+<article class="note-card relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-md shadow-[0_4px_20px_rgba(41,160,184,0.06)] hover:shadow-md transition-all duration-200" data-id="5" data-keywords="title 5 persiapan perjalanan luar kota estimasi tol bbm biaya roadtrip liburan" data-pinned="false" data-progress="32">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-lg bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">
+            #5
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">map</span>
+            Aktif 32%
+          </span>
+</div>
+<button aria-label="Menu Catatan 5" class="menu-btn w-8 h-8 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div class="mt-2.5">
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Title 5</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+          Persiapan perjalanan luar kota &amp; catatan estimasi biaya tol BBM. Target rute Trans-Jawa akhir pekan ini.
+        </p>
+</div>
+<div class="mt-3 flex items-center gap-2 flex-wrap">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">toll</span>
+<span>Estimasi Tol: Rp 350.000</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">commute</span>
+<span>Road Trip</span>
+</div>
+</div>
+<!-- Progress Meter -->
+<div class="mt-3.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Kelengkapan Data</span>
+<span class="text-primary font-bold">32%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-primary-container" style="width: 32%;"></div>
+</div>
+</div>
+<!-- Footer Geotag & Timestamps -->
+<div class="mt-4 pt-3 flex flex-wrap items-center justify-between gap-2">
+<button class="geo-pill inline-flex items-center gap-1 text-primary hover:text-on-secondary-container transition-colors font-label-sm text-label-sm group" data-geo="5.0000, 5.0000">
+<span class="material-symbols-outlined text-[16px] group-hover:scale-110 transition-transform">location_on</span>
+<span class="underline decoration-dotted">Lat: 5.000, Long: 5.000</span>
+</button>
+<div class="flex items-center gap-2 font-label-sm text-[11px] text-outline">
+<span>Dibuat: 14 Mar 2025</span>
+<span>•</span>
+<span>Update: 21:05</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Empty State (Hidden by default, shown when filtered results == 0) -->
+<div class="hidden px-margin py-10 flex flex-col items-center justify-center text-center" id="emptyState">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center text-primary-container mb-3 shadow-inner">
+<span class="material-symbols-outlined text-[40px]">search_off</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Tidak ada catatan ditemukan</h4>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mt-1">
+      Coba kata kunci lain atau setel ulang filter untuk melihat seluruh direktori catatan Hanif.
+    </p>
+<button class="mt-4 px-5 h-10 rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-md active:scale-95 transition-transform" id="resetSearchBtn">
+      Reset Pencarian
+    </button>
+</div>
+<!-- Floating Sticky Action Button (CTA Tambah Catatan Baru) -->
+<div class="fixed bottom-20 right-margin z-40">
+<button aria-label="Tambah Catatan Baru" class="flex items-center gap-2 h-14 px-5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow-[0_8px_24px_rgba(41,160,184,0.35)] active:scale-95 transition-all transform hover:translate-y-[-2px]" id="addNewNoteBtn">
+<span class="material-symbols-outlined text-[24px]">add</span>
+<span>Tambah Catatan</span>
+</button>
+</div>
+<!-- Interactive Action Sheet / Modal Menu (Overlay) -->
+<div class="fixed inset-0 z-50 hidden bg-inverse-surface/40 backdrop-blur-sm flex items-end justify-center transition-opacity" id="actionModal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-3xl p-margin shadow-2xl animate-in slide-in-from-bottom duration-200">
+<div class="w-12 h-1.5 rounded-full bg-outline-variant/60 mx-auto mb-4"></div>
+<div class="flex items-center justify-between pb-3">
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface" id="modalNoteTitle">Opsi Catatan</h4>
+<p class="font-body-md text-body-md text-on-surface-variant" id="modalNoteSubtitle">Kelola aktivitas &amp; BBM</p>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" id="closeModalBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<button class="w-full h-13 px-4 rounded-2xl bg-surface-container-low hover:bg-surface-container flex items-center gap-3 text-left transition-colors">
+<span class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary material-symbols-outlined text-[20px]">edit</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Edit Data Catatan</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Perbarui liter bensin &amp; kelengkapan</span>
+</div>
+</button>
+<button class="w-full h-13 px-4 rounded-2xl bg-surface-container-low hover:bg-surface-container flex items-center gap-3 text-left transition-colors">
+<span class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary material-symbols-outlined text-[20px]">share</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Bagikan Log &amp; Geotag</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Kirim ringkasan via PDF / Struk</span>
+</div>
+</button>
+<button class="w-full h-13 px-4 rounded-2xl bg-error-container/40 hover:bg-error-container flex items-center gap-3 text-left transition-colors">
+<span class="w-10 h-10 rounded-xl bg-error-container flex items-center justify-center text-error material-symbols-outlined text-[20px]">delete</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-error">Hapus Catatan</span>
+<span class="font-label-sm text-label-sm text-on-error-container">Tindakan ini tidak dapat dibatalkan</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Micro Toast Notification for interactive clicks -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 hidden items-center gap-2 px-4 py-2.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md shadow-xl transition-all" id="toastNotification">
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">info</span>
+<span id="toastMsg">Lokasi disalin ke clipboard</span>
+</div>
+</div>
+<script>
+  (function() {
+    // DOM Elements
+    const searchInput = document.getElementById('searchInput');
+    const clearSearchBtn = document.getElementById('clearSearchBtn');
+    const filterChips = document.querySelectorAll('.filter-chip');
+    const sortSelector = document.getElementById('sortSelector');
+    const notesContainer = document.getElementById('notesContainer');
+    const noteCards = Array.from(document.querySelectorAll('.note-card'));
+    const emptyState = document.getElementById('emptyState');
+    const resetSearchBtn = document.getElementById('resetSearchBtn');
+    const resultCount = document.getElementById('resultCount');
+    const actionModal = document.getElementById('actionModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const modalNoteTitle = document.getElementById('modalNoteTitle');
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMsg');
+    const addNewNoteBtn = document.getElementById('addNewNoteBtn');
+    const bookmarkFilterBtn = document.getElementById('bookmarkFilterBtn');
+
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    // Show Toast Utility
+    function showToast(message) {
+      if (!toast || !toastMsg) return;
+      toastMsg.textContent = message;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 2400);
+    }
+
+    // Filter & Search Engine
+    function updateList() {
+      let visibleCount = 0;
+
+      noteCards.forEach(card => {
+        const progress = parseInt(card.dataset.progress || '0', 10);
+        const isPinned = card.dataset.pinned === 'true';
+        const keywords = (card.dataset.keywords || '').toLowerCase();
+
+        // 1. Tab Filtering
+        let matchesTab = true;
+        if (currentFilter === 'high') {
+          matchesTab = progress > 50;
+        } else if (currentFilter === 'mid') {
+          matchesTab = progress >= 20 && progress <= 50;
+        } else if (currentFilter === 'pinned') {
+          matchesTab = isPinned;
+        }
+
+        // 2. Keyword Search
+        const matchesSearch = !searchQuery || keywords.includes(searchQuery);
+
+        if (matchesTab && matchesSearch) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Handle Empty State
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+        notesContainer.classList.add('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+        notesContainer.classList.remove('hidden');
+      }
+
+      // Update counter copy
+      if (resultCount) {
+        resultCount.textContent = `Menampilkan ${visibleCount} dari ${noteCards.length} catatan`;
+      }
+    }
+
+    // Search Input Listener
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.trim().toLowerCase();
+        if (searchQuery.length > 0) {
+          clearSearchBtn.classList.remove('hidden');
+          clearSearchBtn.classList.add('flex');
+        } else {
+          clearSearchBtn.classList.add('hidden');
+          clearSearchBtn.classList.remove('flex');
+        }
+        updateList();
+      });
+    }
+
+    // Clear Search Action
+    if (clearSearchBtn) {
+      clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        clearSearchBtn.classList.add('hidden');
+        clearSearchBtn.classList.remove('flex');
+        updateList();
+        searchInput.focus();
+      });
+    }
+
+    if (resetSearchBtn) {
+      resetSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        currentFilter = 'all';
+        filterChips.forEach(chip => {
+          chip.classList.remove('bg-primary-container', 'text-on-primary');
+          chip.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+        });
+        filterChips[0].classList.add('bg-primary-container', 'text-on-primary');
+        filterChips[0].classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+        if (clearSearchBtn) {
+          clearSearchBtn.classList.add('hidden');
+          clearSearchBtn.classList.remove('flex');
+        }
+        updateList();
+      });
+    }
+
+    // Filter Chips Event
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => {
+          c.classList.remove('bg-primary-container', 'text-on-primary');
+          c.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+        });
+        chip.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+        chip.classList.add('bg-primary-container', 'text-on-primary');
+        currentFilter = chip.dataset.filter;
+        updateList();
+      });
+    });
+
+    // Sort Handler
+    if (sortSelector) {
+      sortSelector.addEventListener('change', () => {
+        const val = sortSelector.value;
+        const sorted = [...noteCards].sort((a, b) => {
+          const progA = parseInt(a.dataset.progress || '0', 10);
+          const progB = parseInt(b.dataset.progress || '0', 10);
+          const idA = parseInt(a.dataset.id || '0', 10);
+          const idB = parseInt(b.dataset.id || '0', 10);
+
+          if (val === 'highest') return progB - progA;
+          if (val === 'lowest') return progA - progB;
+          return idA - idB; // 'newest' default
+        });
+        sorted.forEach(node => notesContainer.appendChild(node));
+      });
+    }
+
+    // Geotag Copy / Microinteraction
+    document.querySelectorAll('.geo-pill').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const coord = btn.getAttribute('data-geo');
+        if (navigator.clipboard && coord) {
+          navigator.clipboard.writeText(coord).catch(() => {});
+        }
+        showToast('Koordinat SPBU ' + coord + ' siap dibuka di Map');
+      });
+    });
+
+    // Options Modal Trigger
+    document.querySelectorAll('.menu-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.note-card');
+        const title = card.querySelector('h3').textContent;
+        if (modalNoteTitle) modalNoteTitle.textContent = title + ' - Opsi';
+        if (actionModal) actionModal.classList.remove('hidden');
+      });
+    });
+
+    if (closeModalBtn) {
+      closeModalBtn.addEventListener('click', () => {
+        actionModal.classList.add('hidden');
+      });
+    }
+
+    if (actionModal) {
+      actionModal.addEventListener('click', (e) => {
+        if (e.target === actionModal) {
+          actionModal.classList.add('hidden');
+        }
+      });
+    }
+
+    // Bookmark quick filter toggle
+    if (bookmarkFilterBtn) {
+      bookmarkFilterBtn.addEventListener('click', () => {
+        const pinnedChip = document.querySelector('[data-filter="pinned"]');
+        if (pinnedChip) pinnedChip.click();
+        showToast('Menampilkan catatan tersemat');
+      });
+    }
+
+    // New Note CTA Tap Feedback
+    if (addNewNoteBtn) {
+      addNewNoteBtn.addEventListener('click', () => {
+        showToast('Membuka formulir entri catatan baru...');
+      });
+    }
+
+    // Synchronize bottom nav visually: ensure 'Notes' is active
+    try {
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'notes') {
+          link.classList.remove('text-on-surface-variant');
+          link.classList.add('text-primary', 'font-semibold');
+        }
+      });
+    } catch(err) {}
+
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(41,160,184,0.08)]" data-active-classes="text-primary-container font-semibold"><div class="flex items-center justify-around h-16 px-gutter"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="notes" href="#"><span class="material-symbols-outlined text-[24px]">description</span><span class="font-label-sm text-label-sm">Notes</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="map" href="#"><span class="material-symbols-outlined text-[24px]">location_on</span><span class="font-label-sm text-label-sm">Map</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="fuel-activity" href="#"><span class="material-symbols-outlined text-[24px]">local_gas_station</span><span class="font-label-sm text-label-sm">Fuel/Activity</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>
