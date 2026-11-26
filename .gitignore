@@ -46,3 +46,7 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+# Design mockups (local only)
+stitch_user_notes_dashboard/
+
